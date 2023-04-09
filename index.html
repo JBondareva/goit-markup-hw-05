@@ -19,6 +19,16 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <p class="text-modal"></p>
+        <button class="close-btn-modal" type="button" data-modal-close="">
+          <svg class="icon-btn-modal">
+            <use href="./images/svg/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <header class="header">
       <div class="header-nav container">
         <!-- Navigation -->
@@ -26,7 +36,7 @@
           <a href="./index.html" class="logo link">Web<span class="logo-part">Studio</span></a>
           <ul class="site-nav header-link list">
             <li class="item">
-              <a class="link" href="./index.html">Studio</a>
+              <a class="link active" href="./index.html">Studio</a>
             </li>
             <li class="item">
               <a class="link" href="./portfolio.html">Portfolio</a>
@@ -56,7 +66,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="btn">Order Service</button>
+          <button type="button" class="btn" data-modal-open="">Order Service</button>
         </div>
       </section>
 
@@ -299,7 +309,7 @@
     </main>
 
     <!-- Customers -->
-    <section class="section" style="padding-top: 0">
+    <section class="section" style="padding-top: 120">
       <div class="container">
         <h2 class="section-title">Customers</h2>
         <ul class="customers list">
@@ -401,5 +411,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
